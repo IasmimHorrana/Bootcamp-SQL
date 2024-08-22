@@ -15,5 +15,11 @@ SELECT COUNT(*) AS "Number of Orders During 1997"
 FROM orders
 WHERE order_date BETWEEN '1997-1-1' AND '1997-12-31';
 -- 5. Obter os nomes de todas as pessoas de contato onde a pessoa é um gerente, em ordem alfabética
-
+SELECT contact_name
+FROM customers 
+WHERE contact_title ILIKE '%manager%'
+ORDER BY contact_name ASC;
 -- 6. Obter todos os pedidos feitos em 19 de maio de 1997
+SELECT *
+FROM orders
+WHERE order_date = '1997-05-19';
