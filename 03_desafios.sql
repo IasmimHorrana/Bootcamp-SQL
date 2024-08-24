@@ -12,9 +12,22 @@ LEFT JOIN customers c ON e.city = c.city
 GROUP BY e.city
 ORDER BY cidade;
 -- 3. Cria um relatório que mostra o número de funcionários e clientes de cada cidade que tem clientes (69 linhas)
-
+SELECT c.city AS cidade, 
+       COUNT(DISTINCT c.customer_id) AS numero_de_clientes, 
+       COUNT(DISTINCT e.employee_id) AS numero_de_funcionarios
+FROM employees e 
+RIGHT JOIN customers c ON e.city = c.city
+GROUP BY c.city
+ORDER BY cidade;
 -- 4.Cria um relatório que mostra o número de funcionários e clientes de cada cidade (71 linhas)
-
+SELECT
+	COALESCE(e.city, c.city) AS cidade,
+	COUNT(DISTINCT e.employee_id) AS numero_de_funcionarios,
+	COUNT(DISTINCT c.customer_id) AS numero_de_clientes
+FROM employees e 
+FULL JOIN customers c ON e.city = c.city
+GROUP BY e.city, c.city
+ORDER BY cidade;
 -- 5. Cria um relatório que mostra a quantidade total de produtos encomendados.
 -- Mostra apenas registros para produtos para os quais a quantidade encomendada é menor que 200 (5 linhas)
 
