@@ -1,9 +1,20 @@
 --Nível Básico
 -- 1: Liste todos os produtos disponíveis.
+SELECT * FROM products
 -- 2: Encontre todos os clientes da cidade de "Seattle".
+SELECT * FROM customers
+WHERE city = 'Seattle'
 -- 3: Liste todos os pedidos realizados por um cliente específico (por exemplo, 'ALFKI').
+SELECT * FROM orders
+WHERE customer_id = 'ALFKI'
 -- 4: Obtenha os nomes e preços dos produtos que pertencem à categoria "Beverages".
+SELECT p.product_name, p.unit_price
+FROM products p
+JOIN categories c ON p.category_id = c.category_id
+WHERE c.category_name = 'Beverages';
 -- 5: Mostre o nome e a cidade de todos os fornecedores.
+SELECT contact_name, city
+FROM suppliers
 
 -- Nível Intermediário
 -- 1: Conte o número total de pedidos realizados por cada cliente.
