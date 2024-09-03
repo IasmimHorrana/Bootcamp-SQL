@@ -1,5 +1,18 @@
 # Bootcamp-SQL
-For this project, I will be using a simple SQL script to populate a database with the famous Northwind example, adapted for PostgreSQL. This script will set up the Northwind database on PostgreSQL, creating all the necessary tables and inserting sample data so that I can start working immediately with SQL queries and analysis in a practical context. This example database is an excellent tool for learning and practicing SQL operations and techniques, particularly useful for understanding how to manipulate relational data in a realistic environment.
+#### The Northwind database contains sales data for a company called Northwind Traders, which imports and exports specialty foods from around the world.
+
+#### The Northwind database is an ERP system with data on customers, orders, inventory, purchases, suppliers, shipments, employees, and accounting.
+
+#### The Northwind dataset includes sample data for the following:
+
+- Suppliers: Suppliers and vendors for Northwind
+- Customers: Customers who purchase products from Northwind
+- Employees: Details of Northwind Traders' employees
+- Products: Product information
+- Shippers: Details of the shippers who transport products from merchants to end customers
+- Orders and Order Details: Sales transaction orders occurring between customers and the company
+
+#### The Northwind database includes 14 tables, and the relationships between the tables are shown in the following entity-relationship diagram.
 
 ![Meu Projeto](images/schema-sql.png)
 
