@@ -1,0 +1,5 @@
+-- 1: Liste o total de vendas (preço total) para cada produto, incluindo o nome do produto.
+-- 2: Encontre o cliente que fez o maior número de pedidos.
+-- 3: Liste todos os pedidos que contêm produtos da categoria "Seafood" e calcule o total de cada pedido.
+-- 4: Mostre o nome e o total de vendas de cada fornecedor, ordenados do maior para o menor total.
+-- 5: Encontre os produtos que foram vendidos em todos os pedidos realizados em 1997.

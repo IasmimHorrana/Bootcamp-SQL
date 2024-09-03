@@ -1,0 +1,5 @@
+-- 1: Conte o número total de pedidos realizados por cada cliente.
+-- 2: Calcule o preço médio dos produtos em cada categoria.
+-- 3: Liste os 5 produtos mais caros.
+-- 4: Encontre os fornecedores que fornecem produtos com um preço unitário superior a $50.
+-- 5: Liste todos os pedidos junto com os detalhes dos produtos em cada pedido.
