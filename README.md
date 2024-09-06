@@ -14,7 +14,7 @@
 
 #### The Northwind database includes 14 tables, and the relationships between the tables are shown in the following entity-relationship diagram.
 
-![Meu Projeto](images/schema-sql.png)
+![Meu Projeto](pics/schema-sql.png)
 
 ## SQL Queries - Basic Level
 ### 1. List all available products
