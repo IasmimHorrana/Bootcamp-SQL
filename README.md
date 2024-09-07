@@ -44,3 +44,44 @@ WHERE c.category_name = 'Beverages';
 SELECT contact_name, city
 FROM suppliers;
 ```
+
+## SQL Queries - Intermediate Level
+
+### 1. Total number of orders placed by each customer
+```sql
+SELECT orders.customer_id, COUNT(order_id) AS TotalOrders
+FROM orders
+GROUP BY orders.customer_id
+ORDER BY TotalOrders DESC;
+```
+### 2. Calculation of the average price of products in each category
+```sql
+SELECT c.category_name, ROUND(AVG(p.unit_price)::numeric, 2) AS AveragePrice
+FROM products p
+JOIN categories c ON p.category_id = c.category_id
+GROUP BY c.category_name
+ORDER BY AveragePrice DESC;
+```
+### 3. List the 5 most expensive products in the table
+```sql
+SELECT p.product_name, p.unit_price
+FROM products p
+ORDER BY p.unit_price DESC
+LIMIT 5;
+```
+### 4. Suppliers offering products with a unit price higher than 50.
+```sql
+SELECT s.company_name, p.product_name, p.unit_price
+FROM products p
+JOIN suppliers s ON p.supplier_id = s.supplier_id
+WHERE p.unit_price > 50
+```
+### 5. Name of suppliers and total products supplied by each
+```sql
+SELECT s.company_name, 
+       COUNT(p.product_id) AS TotalProducts
+FROM Suppliers s
+JOIN Products p ON s.supplier_id = p.supplier_id
+GROUP BY company_name
+ORDER BY TotalProducts DESC;
+```
